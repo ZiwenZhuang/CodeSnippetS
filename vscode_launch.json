@@ -1,0 +1,31 @@
+{
+    // Add vscode configuration to attach your process on your cluster.
+    // Don't forget to update your host address and your port
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach",
+            "type": "python",
+            "request": "attach",
+            "justMyCode": false,
+            "host": "127.0.0.1",
+            "port": 37279,
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "/root/Projects"
+                }
+            ]
+        },
+        {
+            "name": "Python: Launch",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/launch.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--balabala",
+            ]
+        }
+    ]
+}
