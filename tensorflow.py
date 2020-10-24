@@ -15,3 +15,7 @@ def get_all_parents(a):
     gd_sub = tf.graph_util.extract_sub_graph(gd, [a.op.name])
     return [n.name for n in gd_sub.node]
     
+def get_all_variables(scope):
+    """ Return all variables that belong to this scope.
+    """
+    return tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope= scope)
